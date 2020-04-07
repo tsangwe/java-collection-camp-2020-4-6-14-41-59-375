@@ -24,7 +24,12 @@ public class Add {
 
 
     public boolean isIncludedInEven(List<Integer> arrayList, Integer specialElement) {
-        throw new NotImplementedException();
+        for (int currNumber: arrayList) {
+            if (currNumber % 2 == 0 && currNumber == specialElement) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
