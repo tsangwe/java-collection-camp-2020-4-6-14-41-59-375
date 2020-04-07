@@ -2,6 +2,8 @@ package com.thoughtworks.collection;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Add {
@@ -20,7 +22,15 @@ public class Add {
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        List<Integer> resultList = new LinkedList<Integer>();
+        for (int currNumber: arrayList) {
+            if (currNumber % 2 == 0) {
+                resultList.add(currNumber);
+            } else {
+                resultList.add(currNumber * 3 + 2);
+            }
+        }
+        return resultList;
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
@@ -42,7 +52,7 @@ public class Add {
             start = rightBorder;
             end = leftBorder ;
         }
-        if (start%2 != 0) {
+        if (start % 2 != 0) {
             start++;
         }
         for (int currNumber = start; currNumber <= end; currNumber+=2) {
@@ -61,7 +71,7 @@ public class Add {
             start = rightBorder;
             end = leftBorder ;
         }
-        if (start%2 == 0) {
+        if (start % 2 == 0) {
             start++;
         }
         for (int currNumber = start; currNumber <= end; currNumber+=2) {
