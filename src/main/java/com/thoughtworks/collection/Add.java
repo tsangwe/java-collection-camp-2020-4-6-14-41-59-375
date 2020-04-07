@@ -53,7 +53,22 @@ public class Add {
     }
 
     public int getSumOfOdds(int leftBorder, int rightBorder) {
-        throw new NotImplementedException();
+        int sumOfOdds = 0;
+        int start = leftBorder;
+        int end = rightBorder;
+        
+        if (leftBorder > rightBorder) {
+            start = rightBorder;
+            end = leftBorder ;
+        }
+        if (start%2 == 0) {
+            start++;
+        }
+        for (int currNumber = start; currNumber <= end; currNumber+=2) {
+            sumOfOdds += currNumber;
+        }
+        
+        return sumOfOdds;
     }
 
 }
