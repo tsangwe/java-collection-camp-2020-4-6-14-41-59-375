@@ -24,7 +24,13 @@ public class Add {
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        int sumTripleAndAddTwo = 0;
+
+        for (int currNumber: arrayList) {
+            sumTripleAndAddTwo += currNumber * 3 + 2;
+        }
+
+        return sumTripleAndAddTwo;
     }
 
     public int getSumOfEvens(int leftBorder, int rightBorder) {
