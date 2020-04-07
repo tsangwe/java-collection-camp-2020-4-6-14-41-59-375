@@ -1,9 +1,8 @@
 package com.thoughtworks.collection;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Add {
     public int getSumOfProcessedOdds(List<Integer> arrayList) {
@@ -19,7 +18,21 @@ public class Add {
     }
 
     public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        Integer[] resultArray = new Integer[arrayList.size()];
+        int evenIndex = 0;
+        int oddIndex = arrayList.size() - 1;
+
+        for (int currNumber: arrayList) {
+            if (currNumber % 2 == 0) {
+                resultArray[evenIndex] = currNumber;
+                evenIndex++;
+            } else {
+                resultArray[oddIndex] = currNumber;
+                oddIndex--;
+            }
+        }
+
+        return Arrays.asList(resultArray);
     }
 
 
