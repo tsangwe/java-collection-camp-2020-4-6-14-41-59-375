@@ -1,15 +1,21 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 public class Add {
     public int getSumOfProcessedOdds(List<Integer> arrayList) {
+        int sumOfProcessedOdds = 0;
 
-        throw new NotImplementedException();
+        for (int currNumber: arrayList) {
+            if (currNumber % 2 != 0) {
+                sumOfProcessedOdds += currNumber * 3 + 5;
+            }
+        }
+
+        return sumOfProcessedOdds;
     }
 
     public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
